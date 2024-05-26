@@ -5,51 +5,65 @@
   <title>Cyber Secure Mission</title>
   <style>
     body {
+      margin: 0;
+      padding: 0;
       background-image: url('images/home 2.png');
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
+      color: white;
     }
 
     .content {
       display: flex;
-      justify-content: flex-start;
-      align-items: flex-start;
-      height: 100vh;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
       padding: 25px;
-      color: white;
       font-size: 25px;
     }
 
     .box {
       background-color: rgba(0, 0, 0, 0.75);
-      /* Semi-transparent white */
+      border: 2px solid white;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-      /* Shadow effect */
       padding: 20px;
-      max-width: 400px;
-      /* Adjust the width as needed */
-      margin-bottom: 70px;
-      text-align: center;
+      max-width: 80%;
+      margin-bottom: 20px;
     }
-
 
     .button {
       background-color: rgba(0, 0, 0, 0.75);
-      /* Semi-transparent white */
-      border: none;
+      border: 2px solid white;
       color: white;
       padding: 10px 20px;
       text-align: center;
       text-decoration: none;
-      display: block;
-      /* Display the button as a block element */
-      width: 20%;
-      /* Make the button width match the container's width */
       font-size: 30px;
-      font-weight: Bold;
-      margin-top: -150px;
-      margin-left: 50px;
+      font-weight: bold;
+      margin-top: 20px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .button:hover {
+      background-color: #ff5722;
+    }
+
+    @media (max-width: 600px) {
+      .box {
+        width: 90%;
+      }
+
+      .button {
+        width: 80%;
+        font-size: 20px;
+      }
     }
   </style>
 </head>
@@ -57,14 +71,11 @@
 <body>
   <div class="content">
     <div class="box">
-      <h2>Great Job <br></br> You Passed Stage 2 </h2>
-      </h2>
+      <h2>Great Job<br>You Passed Stage 2</h2>
       <p>
         Always remember not to open any USB flash before checking it out especially if it does not belong to you.
       </p>
     </div>
-  </div>
-  <div class="content">
     <a class="button" href="stage 3 project chatting scence.html">Next Stage</a>
   </div>
 </body>

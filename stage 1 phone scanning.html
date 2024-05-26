@@ -4,31 +4,63 @@
 <head>
   <title>Cyber Secure Mission</title>
   <style>
+    html,
     body {
       margin: 0;
       padding: 0;
+      height: 100%;
+      overflow: hidden;
       background-image: url('images/pic5.jpg');
       background-size: cover;
-      background-position: center center fixed;
+      background-position: center;
       background-repeat: no-repeat;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+      padding: 10px 20px;
+      box-sizing: border-box;
+    }
+
+    .button {
+      padding: 10px 20px;
+      font-size: 20px;
+      background-color: black;
+      border: none;
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      margin-top: 20px;
+    }
+
+    .button:hover {
+      background-color: #ff5722;
+    }
+
+    @media (max-width: 600px) {
+      .button {
+        width: 80%;
+        font-size: 16px;
+      }
     }
   </style>
 </head>
 
 <body>
+  <div class="container">
+    <button class="button" onclick="goToNextPage()">Next</button>
+  </div>
+
   <script>
-    // JavaScript code to redirect to another page after a delay
-    window.onload = function () {
-      setTimeout(function () {
-        window.location.href = "iphone is hacked.html";
-      }, 2000); // 3000 milliseconds = 3 seconds
-    };
+    function goToNextPage() {
+      window.location.href = "iphone is hacked.html";
+    }
   </script>
-
-
-
-
-
 </body>
 
 </html>

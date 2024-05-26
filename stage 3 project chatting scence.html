@@ -10,7 +10,6 @@
       font-family: Arial, sans-serif;
     }
 
-
     .background-image {
       background-image: url('images/pic21.jpg');
       background-size: cover;
@@ -24,23 +23,41 @@
     }
 
     .paragraph {
-      opacity: 0;
-      animation: fadeIn 5s forwards;
+      opacity: 1;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
       background-color: rgba(0, 0, 0, 0.75);
       padding: 20px;
       margin-bottom: 10px;
-      font-size: 20px;
+      font-size: 30px;
+      max-width: 600px;
     }
 
+    .button {
+      background-color: rgba(0, 0, 0, 0.75);
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+      font-size:30px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      margin-top: 20px;
+    }
 
-    @keyframes fadeIn {
-      0% {
-        opacity: 0;
+    .button:hover {
+      background-color: #ff5722;
+    }
+
+    @media (max-width: 600px) {
+      .paragraph {
+        font-size: 16px;
       }
 
-      100% {
-        opacity: 1;
+      .button {
+        width: 80%;
+        font-size: 16px;
       }
     }
   </style>
@@ -49,64 +66,13 @@
 <body>
   <div class="background-image">
     <div id="paragraph1" class="paragraph">
-      <p>Ahmed: What do you think about the new Website ? </p>
+      <h3>Ahmed: What do you think about the new Website?</p>
     </div>
     <div id="paragraph2" class="paragraph">
-      <p>Ali: I think it’s good and it has a lot of features that we will be needed in the future. </p>
+      <h3>Ali: I think it’s good and it has a lot of features that we will need in the future.</p>
     </div>
-
-
-
+    <a class="button" href="stage 3 phone calling.html">Next</a>
   </div>
-
-  <script>
-
-    // JavaScript code to redirect to another page after a delay
-    window.onload = function () {
-      setTimeout(function () {
-        window.location.href = "stage 3 phone calling.html";
-      }, 25000); // 3000 milliseconds = 3 seconds
-
-    };
-  </script>
-
-  <script>
-    // Set the time interval between each paragraph
-    const paragraphInterval = 150000;
-
-    // Variables to keep track of the current paragraph and timer
-    let currentParagraphIndex = 0;
-    let timer;
-
-    // Function to display the next paragraph
-    function showNextParagraph() {
-      const currentParagraph = document.getElementById(paragraph${ currentParagraphIndex + 1});
-    currentParagraph.style.display = "block";
-
-    // Increment the current paragraph index
-    currentParagraphIndex++;
-
-    // If all paragraphs have been displayed, show the next button
-    if (currentParagraphIndex === 3) {
-      document.getElementById("nextButton").style.display = "block";
-    } else {
-      // Otherwise, start the timer for the next paragraph
-      timer = setTimeout(showNextParagraph, paragraphInterval);
-    }
-    }
-
-    // Start the timer for the first paragraph
-    timer = setTimeout(showNextParagraph, paragraphInterval);
-
-    // Add event listener to the next button
-    document.getElementById("nextButton").addEventListener("click", function () {
-      // Redirect the user to the next web page
-      window.location.href = "next-page.html";
-    });
-
-
-
-  </script>
 </body>
 
 </html>

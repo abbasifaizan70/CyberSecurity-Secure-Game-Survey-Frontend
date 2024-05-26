@@ -4,31 +4,62 @@
 <head>
   <title>Cyber Secure Mission</title>
   <style>
-    body {
+    body,
+    html {
       margin: 0;
       padding: 0;
+      height: 100%;
       background-image: url('images/pic20.jpg');
       background-size: cover;
-      background-position: center center fixed;
+      background-position: center center;
       background-repeat: no-repeat;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
+      color: white;
+    }
+
+    .container {
+      background-color: rgba(0, 0, 0, 0.75);
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      max-width: 80%;
+    }
+
+    .button {
+      background-color: rgba(0, 0, 0, 0.75);
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+      font-size: 20px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      margin-top: 20px;
+    }
+
+    .button:hover {
+      background-color: #ff5722;
+    }
+
+    @media (max-width: 600px) {
+      .button {
+        width: 80%;
+        font-size: 16px;
+      }
     }
   </style>
 </head>
 
 <body>
-  <script>
-    // JavaScript code to redirect to another page after a delay
-    window.onload = function () {
-      setTimeout(function () {
-        window.location.href = "wrong answer stage 2.html";
-      }, 3000); // 3000 milliseconds = 3 seconds
-    };
-  </script>
-
-
-
-
-
+  <div class="container">
+    <a class="button" href="wrong answer stage 2.html">Next</a>
+  </div>
 </body>
 
 </html>
